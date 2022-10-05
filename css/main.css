@@ -162,23 +162,40 @@
   font-size: 24px;
   color: white;
   cursor: pointer;
+  font-size: 24px;
 }
 
-.about {
+.team {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.about h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.team h2 {
+  padding-top: 30px;
 }
-.about h5 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+.team .teammembers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.about img {
+@media screen and (min-width: 768px) {
+  .team .teammembers {
+    flex-direction: row;
+    margin-left: 60px;
+  }
+}
+.team .teammembers li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.team .teammembers__name {
+  padding: 20px;
+}
+.team .teammembers__img {
   border-radius: 50%;
   height: 40%;
   width: 40%;
@@ -186,7 +203,7 @@
   -webkit-box-shadow: 4px 4px 4px gray;
   box-shadow: 0px 0px 12px gray;
 }
-.about .fact {
+.team .teammembers__text {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -199,21 +216,27 @@
   background-color: lightgray;
   border-radius: 2%;
 }
-.about span:first-child {
-  font-size: 80pt;
-  font-family: Arial, Helvetica, sans-serif;
+.team .teammembers__text--mark i {
+  font-size: 50px;
+  transform: rotate(180deg);
 }
-.about .container-icon {
-  padding-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .team .teammembers__text--info {
+    font-size: 12px;
+  }
 }
-.about .container-icon a:hover {
+.team .container-icon {
+  padding-bottom: 25px;
+}
+.team .container-icon a:hover {
   color: black;
 }
-.about .container-icon a:visited {
+.team .container-icon a:visited {
   color: black;
 }
-.about .container-icon i {
+.team .container-icon i {
   cursor: pointer;
+  font-size: 24px;
 }
 
 .contact {
@@ -224,14 +247,34 @@
   background-color: black;
   padding: 10%;
 }
+@media screen and (min-width: 768px) {
+  .contact {
+    height: 10%;
+    padding: 0;
+  }
+}
 .contact footer {
   padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .contact footer {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .contact footer .info,
 .contact footer .mail,
 .contact footer .socialmedia {
   color: white;
   padding-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .contact footer .info,
+.contact footer .mail,
+.contact footer .socialmedia {
+    margin: 0;
+    padding: 60px;
+  }
 }
 .contact footer .info p,
 .contact footer .mail p,

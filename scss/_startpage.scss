@@ -182,35 +182,61 @@
   }
 }
 
-.about {
+.team {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 30px;
   }
 
-  h5 {
-    @include about.topmargin;
-  }
+  .teammembers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  img {
-    @include about.pictures;
-  }
+    @include mix.desktop {
+      flex-direction: row;
+      margin-left: 60px;
+    }
 
-  .fact {
-    @include about.box;
-  }
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-  span:first-child {
-    @include about.mark;
+    &__name {
+      padding: 20px;
+    }
+
+    &__img {
+      @include about.pictures;
+    }
+
+    &__text {
+      @include about.box;
+
+      &--mark {
+        i {
+          @include about.mark;
+        }
+      }
+
+      &--info {
+        @include mix.desktop {
+          font-size: 12px;
+        }
+      }
+    }
   }
 
   .container-icon {
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 
     a:hover {
       color: var.$secondary;
@@ -234,13 +260,27 @@
   background-color: var.$secondary;
   padding: 10%;
 
+  @include mix.desktop {
+    height: 10%;
+    padding: 0;
+  }
+
   footer {
     padding-bottom: 20px;
+    @include mix.desktop {
+      display: flex;
+      flex-direction: row;
+    }
 
     .info,
     .mail,
     .socialmedia {
       @include contact.contactstyle;
+
+      @include mix.desktop {
+        margin: 0;
+        padding: 60px;
+      }
 
       p {
         @include contact.pstyle;

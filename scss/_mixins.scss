@@ -2,48 +2,7 @@
 
 @mixin icon {
   cursor: pointer;
-}
-
-@mixin pictures {
-  border-radius: 50%;
-  height: 40%;
-  width: 40%;
-  -moz-box-shadow: 4px 4px 4px gray;
-  -webkit-box-shadow: 4px 4px 4px gray;
-  box-shadow: 0px 0px 12px gray;
-}
-
-@mixin box {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 30px;
-  padding: 8px;
-  width: 330px;
-  height: 130px;
-  background-color: lightgray;
-  border-radius: 2%;
-}
-
-@mixin mark {
-  font-size: 80pt;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@mixin topmargin {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-@mixin contactstyle {
-  color: var.$primary;
-  padding-top: 30px;
-}
-
-@mixin pstyle {
-  padding: 5px;
+  font-size: 24px;
 }
 
 @mixin desktop {

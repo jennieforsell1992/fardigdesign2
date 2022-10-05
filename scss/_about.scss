@@ -25,10 +25,6 @@
 }
 
 @mixin mark {
-  font-size: 80pt;
-  font-family: Arial, Helvetica, sans-serif;
-}
-@mixin topmargin {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: 50px;
+  transform: rotate(180deg);
 }
