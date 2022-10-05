@@ -11,7 +11,7 @@
   padding: 8px;
   width: 330px;
   height: 130px;
-  background-color: lightgray;
+  background-color: var.$color-box;
   border-radius: 2%;
 }
 
@@ -26,5 +26,6 @@
 
 @mixin mark {
   font-size: 50px;
+  display: inline-block;
   transform: rotate(180deg);
 }

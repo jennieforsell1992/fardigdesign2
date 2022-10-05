@@ -1,9 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "Times New Roman", Arial, Helvetica, sans-serif;
+}
+html .container,
+body .container {
   background: url(../assets/negative-space-black-forest-dawn.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,152 +18,183 @@
   height: 100vh;
   color: white;
 }
-.container a {
+html .container a,
+body .container a {
   color: white;
 }
-.container .header {
+html .container .header,
+body .container .header {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.1516981793) 0%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
+  position: absolute;
+  margin: 0;
 }
-.container .header ul {
+html .container .header ul,
+body .container .header ul {
   margin: 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
 }
-.container .header ul li {
+html .container .header ul li,
+body .container .header ul li {
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 5px;
 }
 @media screen and (min-width: 768px) {
-  .container .header ul li {
+  html .container .header ul li,
+body .container .header ul li {
     float: left;
   }
 }
-.container .header ul a {
+html .container .header ul a,
+body .container .header ul a {
   display: block;
   padding: 10px;
   text-decoration: none;
 }
 @media screen and (min-width: 768px) {
-  .container .header ul a {
+  html .container .header ul a,
+body .container .header ul a {
     padding: 20px 30px;
   }
-  .container .header ul a:hover {
+  html .container .header ul a:hover,
+body .container .header ul a:hover {
     text-decoration: underline;
   }
 }
-.container .header .menu {
+html .container .header .menu,
+body .container .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height 1s ease-in-out;
+  transition: max-height 0.7s ease-in-out;
 }
 @media screen and (min-width: 768px) {
-  .container .header .menu {
+  html .container .header .menu,
+body .container .header .menu {
     float: right;
     max-height: none;
   }
 }
-.container .header .menu-icon {
+html .container .header .menu-icon,
+body .container .header .menu-icon {
   padding: 28px;
   position: relative;
   float: right;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .container .header .menu-icon {
+  html .container .header .menu-icon,
+body .container .header .menu-icon {
     display: none;
   }
 }
-.container .header .menu-icon .nav-icon {
+html .container .header .menu-icon .nav-icon,
+body .container .header .menu-icon .nav-icon {
   background: white;
   display: block;
   height: 2px;
   width: 18px;
   position: relative;
-  transition: background 1s ease-in-out;
+  transition: background 0.7s ease-in-out;
 }
-.container .header .menu-icon .nav-icon:before {
+html .container .header .menu-icon .nav-icon:before,
+body .container .header .menu-icon .nav-icon:before {
   background: white;
   content: "";
   display: block;
   width: 100%;
   height: 100%;
   position: absolute;
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
   top: 5px;
 }
-.container .header .menu-icon .nav-icon:after {
+html .container .header .menu-icon .nav-icon:after,
+body .container .header .menu-icon .nav-icon:after {
   background: white;
   content: "";
   display: block;
   width: 100%;
   height: 100%;
   position: absolute;
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
   top: -5px;
 }
-.container .header .menu-btn {
+html .container .header .menu-btn,
+body .container .header .menu-btn {
   display: none;
 }
-.container .header .menu-btn:checked ~ .menu {
+html .container .header .menu-btn:checked ~ .menu,
+body .container .header .menu-btn:checked ~ .menu {
   max-height: 240px;
 }
-.container .header .menu-btn:checked ~ .menu-icon .nav-icon {
+html .container .header .menu-btn:checked ~ .menu-icon .nav-icon,
+body .container .header .menu-btn:checked ~ .menu-icon .nav-icon {
   background: transparent;
 }
-.container .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+html .container .header .menu-btn:checked ~ .menu-icon .nav-icon:before,
+body .container .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
   transform: rotate(-45deg);
   top: 0;
 }
-.container .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+html .container .header .menu-btn:checked ~ .menu-icon .nav-icon:after,
+body .container .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
   transform: rotate(45deg);
   top: 0;
 }
-.container main {
+html .container main,
+body .container main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  margin-top: 180px;
+  padding-top: 150px;
 }
 @media screen and (min-width: 768px) {
-  .container main {
+  html .container main,
+body .container main {
     margin-top: auto;
     position: absolute;
-    top: 30%;
     left: 32%;
   }
 }
-.container h3,
-.container p {
+html .container h3,
+html .container p,
+body .container h3,
+body .container p {
+  height: 30px;
   font-size: 18pt;
-  padding: 30px;
+  padding: 50px;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .container h3,
-.container p {
+  html .container h3,
+html .container p,
+body .container h3,
+body .container p {
     line-height: 2px;
     font-size: 15pt;
   }
 }
 @media screen and (min-width: 768px) {
-  .container .container-icon {
+  html .container .container-icon,
+body .container .container-icon {
     position: absolute;
     top: 100%;
     left: 50%;
   }
 }
-.container .container-icon a {
+html .container .container-icon a,
+body .container .container-icon a {
   display: flex;
   justify-content: center;
 }
-.container .container-icon a i {
+html .container .container-icon a i,
+body .container .container-icon a i {
   position: absolute;
   bottom: 15px;
   font-size: 24px;
@@ -164,38 +202,44 @@
   cursor: pointer;
   font-size: 24px;
 }
-
-.team {
+html .team,
+body .team {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.team h2 {
+html .team h2,
+body .team h2 {
   padding-top: 30px;
 }
-.team .teammembers {
+html .team .teammembers,
+body .team .teammembers {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .team .teammembers {
+  html .team .teammembers,
+body .team .teammembers {
     flex-direction: row;
     margin-left: 60px;
   }
 }
-.team .teammembers li {
+html .team .teammembers li,
+body .team .teammembers li {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.team .teammembers__name {
+html .team .teammembers__name,
+body .team .teammembers__name {
   padding: 20px;
 }
-.team .teammembers__img {
+html .team .teammembers__img,
+body .team .teammembers__img {
   border-radius: 50%;
   height: 40%;
   width: 40%;
@@ -203,7 +247,8 @@
   -webkit-box-shadow: 4px 4px 4px gray;
   box-shadow: 0px 0px 12px gray;
 }
-.team .teammembers__text {
+html .team .teammembers__text,
+body .team .teammembers__text {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -216,30 +261,37 @@
   background-color: lightgray;
   border-radius: 2%;
 }
-.team .teammembers__text--mark i {
+html .team .teammembers__text--mark i,
+body .team .teammembers__text--mark i {
   font-size: 50px;
+  display: inline-block;
   transform: rotate(180deg);
 }
 @media screen and (min-width: 768px) {
-  .team .teammembers__text--info {
+  html .team .teammembers__text--info,
+body .team .teammembers__text--info {
     font-size: 12px;
   }
 }
-.team .container-icon {
+html .team .container-icon,
+body .team .container-icon {
   padding-bottom: 25px;
 }
-.team .container-icon a:hover {
+html .team .container-icon a:hover,
+body .team .container-icon a:hover {
   color: black;
 }
-.team .container-icon a:visited {
+html .team .container-icon a:visited,
+body .team .container-icon a:visited {
   color: black;
 }
-.team .container-icon i {
+html .team .container-icon i,
+body .team .container-icon i {
   cursor: pointer;
   font-size: 24px;
 }
-
-.contact {
+html .contact,
+body .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -248,42 +300,57 @@
   padding: 10%;
 }
 @media screen and (min-width: 768px) {
-  .contact {
+  html .contact,
+body .contact {
     height: 10%;
     padding: 0;
   }
 }
-.contact footer {
+html .contact footer,
+body .contact footer {
   padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
-  .contact footer {
+  html .contact footer,
+body .contact footer {
     display: flex;
     flex-direction: row;
   }
 }
-.contact footer .info,
-.contact footer .mail,
-.contact footer .socialmedia {
+html .contact footer .info,
+html .contact footer .mail,
+html .contact footer .socialmedia,
+body .contact footer .info,
+body .contact footer .mail,
+body .contact footer .socialmedia {
   color: white;
   padding-top: 30px;
 }
 @media screen and (min-width: 768px) {
-  .contact footer .info,
-.contact footer .mail,
-.contact footer .socialmedia {
+  html .contact footer .info,
+html .contact footer .mail,
+html .contact footer .socialmedia,
+body .contact footer .info,
+body .contact footer .mail,
+body .contact footer .socialmedia {
     margin: 0;
     padding: 60px;
   }
 }
-.contact footer .info p,
-.contact footer .mail p,
-.contact footer .socialmedia p {
+html .contact footer .info p,
+html .contact footer .mail p,
+html .contact footer .socialmedia p,
+body .contact footer .info p,
+body .contact footer .mail p,
+body .contact footer .socialmedia p {
   padding: 5px;
 }
-.contact footer .info p i,
-.contact footer .mail p i,
-.contact footer .socialmedia p i {
+html .contact footer .info p i,
+html .contact footer .mail p i,
+html .contact footer .socialmedia p i,
+body .contact footer .info p i,
+body .contact footer .mail p i,
+body .contact footer .socialmedia p i {
   letter-spacing: 17px;
   font-size: 17px;
   color: white;
