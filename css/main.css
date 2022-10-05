@@ -15,9 +15,9 @@
   color: white;
 }
 .container .header {
-  box-shadow: 0 0 0 0 white;
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1516981793) 0%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
-  z-index: 3;
 }
 .container .header ul {
   margin: 0;
@@ -29,6 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 5px;
 }
 @media screen and (min-width: 768px) {
   .container .header ul li {
@@ -43,6 +44,9 @@
 @media screen and (min-width: 768px) {
   .container .header ul a {
     padding: 20px 30px;
+  }
+  .container .header ul a:hover {
+    text-decoration: underline;
   }
 }
 .container .header .menu {
@@ -154,7 +158,7 @@
 }
 .container .container-icon a i {
   position: absolute;
-  bottom: 0px;
+  bottom: 15px;
   font-size: 24px;
   color: white;
   cursor: pointer;
