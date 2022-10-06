@@ -3,22 +3,21 @@
 
 @mixin box {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  width: 300px;
+  height: 150px;
   margin: 30px;
-  padding: 8px;
-  width: 330px;
-  height: 130px;
-  background-color: var.$color-box;
+  padding: 30px;
+  padding-top: 10px;
   border-radius: 2%;
+  background-color: var.$color-box;
 }
 
 @mixin pictures {
   border-radius: 50%;
-  height: 40%;
-  width: 40%;
+  height: 90%;
+  width: 90%;
   -moz-box-shadow: 4px 4px 4px gray;
   -webkit-box-shadow: 4px 4px 4px gray;
   box-shadow: 0px 0px 12px gray;

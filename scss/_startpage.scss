@@ -95,7 +95,7 @@ body {
       height: 2px;
       width: 18px;
       position: relative;
-      transition: background 0.7s ease-in-out;
+      transition: background-color 0.7s ease-in-out;
     }
 
     .header .menu-icon .nav-icon:before {
@@ -160,11 +160,10 @@ body {
     p {
       height: 30px;
       font-size: 18pt;
-      padding: 50px;
-
+      padding: 30px;
+      margin: 20px;
       text-align: center;
       @include mix.desktop {
-        line-height: 2px;
         font-size: 15pt;
       }
     }
@@ -187,7 +186,7 @@ body {
         }
       }
     }
-  }
+  } //container
 
   .team {
     display: flex;
@@ -204,17 +203,19 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 100%;
 
       @include mix.desktop {
         flex-direction: row;
-        margin-left: 60px;
       }
 
       li {
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
       }
 
       &__name {
@@ -223,27 +224,31 @@ body {
 
       &__img {
         @include about.pictures;
+        @include mix.desktop {
+          width: 40%;
+          height: 40%;
+        }
       }
 
       &__text {
         @include about.box;
 
-        &--mark {
+        &--info {
+          text-align: center;
           i {
             @include about.mark;
           }
-        }
 
-        &--info {
           @include mix.desktop {
             font-size: 12px;
           }
         }
       }
-    }
+    } //teammembers
 
     .container-icon {
       padding-bottom: 25px;
+      color: var.$secondary;
 
       a:hover {
         color: var.$secondary;
@@ -257,7 +262,7 @@ body {
         @include mix.icon;
       }
     }
-  }
+  } //team
 
   .contact {
     display: flex;
