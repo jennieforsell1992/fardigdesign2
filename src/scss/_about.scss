@@ -1,6 +1,15 @@
 @use "variables" as var;
 @use "mixins" as mix;
 
+@mixin liststyle {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
 @mixin box {
   display: flex;
   justify-content: center;
