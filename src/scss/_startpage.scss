@@ -165,6 +165,7 @@ body {
       text-align: center;
       @include mix.desktop {
         font-size: 15pt;
+        padding: 10px;
       }
     }
     .container-icon {
@@ -232,6 +233,11 @@ body {
 
       &__text {
         @include about.box;
+
+        @include mix.desktop {
+          width: 400px;
+          height: 100px;
+        }
 
         &--info {
           text-align: center;
